@@ -6,8 +6,9 @@
   const wrapper = nav.querySelector(".line-wrapper");
   if (!line || !wrapper || !links.length) return;
 
-  const step = 60; // высота одной "позиции"
-  const offsetTop = 0; // можно подправить, если нужно сместить вверх/вниз
+  const step = 60;
+  const offsetTop = 0;
+  let lock = false;
 
   const moveTo = (index) => {
     const top = offsetTop + index * step;
@@ -24,13 +25,21 @@
       const href = l.getAttribute("href");
       if (href?.startsWith("#")) {
         e.preventDefault();
-        document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+        const target = document.querySelector(href);
+        if (target) {
+          lock = true;
+          document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+          setActive(l);
+          setTimeout(() => (lock = false), 700);
+        }
+      } else {
+        setActive(l);
       }
-      setActive(l);
     })
   );
 
   const updateActiveByScroll = () => {
+    if (lock) return;
     let nearest = 0;
     let min = Infinity;
     links.forEach((l, i) => {
