@@ -1,6 +1,10 @@
+.roadmap {
+  margin-bottom: 200px;
+}
+
 .roadmap-list {
   max-width: 1460px;
-  padding-inline: var(--container-padding-x);
+  padding-inline: calc(var(--container-padding-x) * 3);
   margin-inline: auto;
   display: flex;
   flex-direction: column;
