@@ -4,7 +4,13 @@ body {
   font-size: 18px;
   line-height: 1.75;
   color: var(--color-light);
-  background-color: var(--color-bg);
+  background: url("../../assets/images/backgrounds/roadmap-bg.png") center
+      1204px / cover no-repeat,
+    url("../../assets/images/front-hill.png") center 768px / cover no-repeat,
+    url("../../assets/images/back-mountain.png") center 464px / cover no-repeat,
+    url("../../assets/images/backgrounds/hero-bg.png") center/cover no-repeat,
+    url("../../assets/images/backgrounds/sky-bg.png") center -400px / cover no-repeat,
+    var(--color-bg);
 }
 
 a {
