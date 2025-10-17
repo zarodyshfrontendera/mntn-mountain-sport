@@ -3,3 +3,31 @@
   padding-inline: var(--container-padding-x);
   margin-inline: auto;
 }
+
+.tag {
+  position: relative;
+  color: var(--color-accent);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  padding-left: calc(72px + 32px);
+}
+
+.tag::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 72px;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+.title-medium {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 1.2;
+  font-family: var(--font-family-secondary);
+}

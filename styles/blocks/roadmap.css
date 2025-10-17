@@ -1,0 +1,78 @@
+.roadmap-list {
+  max-width: 1460px;
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 200px;
+}
+
+.roadmap-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.roadmap-item:nth-child(1) .roadmap-item-title::before {
+  content: "01";
+  position: absolute;
+  top: 30px;
+  left: -150px;
+  font-size: 240px;
+  font-family: var(--font-family-primary);
+  opacity: 0.1;
+}
+
+.roadmap-item:nth-child(2) .roadmap-item-title::before {
+  content: "02";
+  position: absolute;
+  top: 30px;
+  right: 500px;
+  font-size: 240px;
+  font-family: var(--font-family-primary);
+  opacity: 0.1;
+}
+
+.roadmap-item:nth-child(3) .roadmap-item-title::before {
+  content: "03";
+  position: absolute;
+  top: 30px;
+  left: -150px;
+  font-size: 240px;
+  font-family: var(--font-family-primary);
+  opacity: 0.1;
+}
+
+.roadmap-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.roadmap-item-body {
+  max-width: 632px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 27px;
+}
+
+.roadmap-item-description {
+  font-weight: bold;
+}
+
+.roadmap-item-link {
+  position: relative;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.roadmap-item-link::after {
+  content: "";
+  width: 16px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: calc(87px + 16px);
+  transform: translateY(-50%);
+  background: url("../../assets/icons/arrows/right-accent.svg") center/contain
+    no-repeat;
+}
