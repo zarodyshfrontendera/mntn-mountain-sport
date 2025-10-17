@@ -11,17 +11,13 @@
 }
 
 .header-signin {
-  position: relative;
   font-size: 17px;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 8px;
+  transition-duration: var(--transition-duration);
 }
 
-.header-signin::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: calc(100% + 8px);
-  transform: translateY(-50%);
-  width: 24px;
-  aspect-ratio: 1;
-  background: url("../../assets/icons/account.svg") center/contain no-repeat;
+.header-signin:hover {
+  color: var(--color-accent);
 }

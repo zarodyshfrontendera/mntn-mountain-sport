@@ -1,12 +1,14 @@
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 200px;
   margin-bottom: 840px;
 }
 
 .soc1als {
+  position: fixed;
+  left: calc(var(--container-padding-x) * 2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,24 +38,14 @@
 }
 
 .hero-scroll-down-link {
+  display: inline-flex;
+  column-gap: 16px;
   font-weight: 700;
-  position: relative;
-}
-
-.hero-scroll-down-link::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: calc(94px + 16px);
-  transform: translateY(-50%);
-  width: 16px;
-  height: 24px;
-  background: url("../../assets/icons/arrows/bottom.svg") center/contain
-    no-repeat;
 }
 
 .nav-track {
-  position: relative;
+  position: fixed;
+  right: calc(var(--container-padding-x) * 2);
   display: flex;
   flex-direction: column;
   align-items: flex-end;

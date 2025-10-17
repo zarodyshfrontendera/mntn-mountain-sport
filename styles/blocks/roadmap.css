@@ -77,6 +77,11 @@
   top: 50%;
   left: calc(87px + 16px);
   transform: translateY(-50%);
+  transition-duration: var(--transition-duration);
   background: url("../../assets/icons/arrows/right-accent.svg") center/contain
     no-repeat;
+}
+
+.roadmap-item-link:hover::after {
+  left: calc(87px + 12px);
 }
