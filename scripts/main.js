@@ -30,7 +30,7 @@
           lock = true;
           document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
           setActive(l);
-          setTimeout(() => (lock = false), 700);
+          setTimeout(() => (lock = false), 4000);
         }
       } else {
         setActive(l);
