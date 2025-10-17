@@ -1,0 +1,24 @@
+.header {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav-list {
+  display: flex;
+  column-gap: 40px;
+}
+
+.header-signin {
+  font-size: 17px;
+  align-items: center;
+  display: inline-flex;
+  column-gap: 8px;
+}
+
+.header-signin::before {
+  content: "";
+  width: 24px;
+  aspect-ratio: 1;
+  background: url("../../assets/icons/account.svg") center/contain no-repeat;
+}
