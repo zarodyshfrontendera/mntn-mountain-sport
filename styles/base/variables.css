@@ -1,0 +1,13 @@
+:root {
+  --color-light: #fff;
+  --color-bg: #0b1d26;
+  --color-accent: #fbd784;
+
+  --font-family-primary: "Gilroy", sans-serif;
+  --font-family-secondary: "Chronicle Display", serif;
+
+  --container-width: 1760px;
+  --container-padding-x: 15px;
+
+  --transition-duration: 0.2s;
+}
