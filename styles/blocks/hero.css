@@ -1,0 +1,117 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 200px;
+  /* height: 50vw; */
+}
+
+.soc1als {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 24px;
+}
+
+.soc1als span {
+  rotate: 180deg;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: 700;
+}
+
+.hero-content {
+  max-width: 950px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.hero-tag {
+  position: relative;
+  color: var(--color-accent);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  padding-left: calc(72px + 32px);
+}
+
+.hero-tag::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 72px;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+.hero-title {
+  font-family: var(--font-family-secondary);
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 88px;
+  line-height: 1.2;
+}
+
+.hero-scroll-down-link {
+  font-weight: 700;
+  position: relative;
+}
+
+.hero-scroll-down-link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(94px + 16px);
+  transform: translateY(-50%);
+  width: 16px;
+  height: 24px;
+  background: url("../../assets/icons/arrow-bottom.svg") center/contain
+    no-repeat;
+}
+
+.nav-track {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 40px;
+  padding-right: 32px;
+  z-index: 50;
+}
+
+.nav-track a {
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  padding-right: 0;
+  line-height: 1;
+  display: inline-block;
+}
+
+.nav-track .line-wrapper {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  transform: translateY(-50%);
+  width: 3px;
+  background-color: rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+  height: 240px;
+}
+
+.nav-track .line {
+  position: absolute;
+  right: 0;
+  width: 3px;
+  height: 60px;
+  background-color: var(--color-light);
+  top: 0;
+  transform: translateY(0);
+  transition: top var(--transition-duration) ease;
+  will-change: top;
+}

@@ -1,6 +1,7 @@
 .header {
   margin-top: 64px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -10,14 +11,16 @@
 }
 
 .header-signin {
+  position: relative;
   font-size: 17px;
-  align-items: center;
-  display: inline-flex;
-  column-gap: 8px;
 }
 
 .header-signin::before {
   content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 8px);
+  transform: translateY(-50%);
   width: 24px;
   aspect-ratio: 1;
   background: url("../../assets/icons/account.svg") center/contain no-repeat;
